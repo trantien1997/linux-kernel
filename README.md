@@ -1,29 +1,29 @@
 1. Cài Đặt Toolchain
 1.1 Sử dụng Crosstool-NG để Build Toolchain
 1.1.1 clone Crosstool-NG:
-# git clone https://github.com/crosstool-ng/crosstool-ng.git
-# cd crosstool-ng
-# git checkout crosstool-ng-1.24.0
+git clone https://github.com/crosstool-ng/crosstool-ng.git
+cd crosstool-ng
+git checkout crosstool-ng-1.24.0
 
 1.1.2 intall
-# ./bootstrap
-# ./configure --prefix=${PWD}
-# make
-# make install
+./bootstrap
+./configure --prefix=${PWD}
+make
+make install
 
 1.1.3 select this target configuration
 show all toolchain:
-# bin/ct-ng list-samples
+bin/ct-ng list-samples
 
-# bin/ct-ng arm-unknown-linux-gnueabi
+bin/ct-ng arm-unknown-linux-gnueabi
 
 1.1.3 config
-# bin/ct-ng menuconfig
+bin/ct-ng menuconfig
 In Paths and misc options, disable Render the toolchain read-only
 (CT_PREFIX_DIR_RO)
 
 1.1.4 Build Toolchain:
-# bin/ct-ng build
+bin/ct-ng build
 Toolchain sẽ được cài đặt vào thư mục /home/podman/x-tools.
 
 2. Build Bootloader (U-Boot)
